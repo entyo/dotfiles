@@ -11,9 +11,7 @@ git submodule init && git submodule update
 export DOTFILES=$HOME/dotfiles
 
 # zsh
-
-echo "/usr/local/bin/zsh" >> /etc/shells
-chsh -s /usr/local/bin/zsh
+chsh -s /usr/bin/zsh
 
 source $DOTFILES/antigen/antigen.zsh
 antigen bundle sorin-ionescu/prezto
