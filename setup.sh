@@ -26,11 +26,11 @@ chsh -s /usr/bin/zsh
 
 # gnome-terminal-colors-solarized
 cd $DOTFILES/gnome-terminal-colors-solarized
-sh ./install.sh
+./install.sh
 
 # tmux
 cd $DOTFILES/tmux/
-sh ./autogen.sh
+./autogen.sh
 ./configure && make && sudo make install
 ln -s $HOME/dotfiles/.tmux.conf $HOME/
 
