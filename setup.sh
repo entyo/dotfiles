@@ -11,21 +11,18 @@ git submodule init && git submodule update
 export DOTFILES=$HOME/dotfiles
 
 # zsh
-
-echo "/usr/local/bin/zsh" >> /etc/shells
-chsh -s /usr/local/bin/zsh
-
-source $DOTFILES/antigen/antigen.zsh
-antigen bundle sorin-ionescu/prezto
-ln -s $HOME/.antigen/repos/.zprezto $HOME/
-ln -s $DOTFILES/zsh/prezto/.zpreztorc $HOME/
-setopt EXTENDED_GLOB
-for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
-  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
-done
+# source $DOTFILES/antigen/antigen.zsh
+# antigen bundle sorin-ionescu/prezto
+# ln -s $HOME/.antigen/repos/.zprezto $HOME/
+# ln -s $DOTFILES/zsh/prezto/.zpreztorc $HOME/
+# setopt EXTENDED_GLOB
+# for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+#   ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+# done
 
 ln -s $HOME/dotfiles/zsh/.zshrc $HOME/
 ln -s $HOME/dotfiles/zsh/.zprofile $HOME/
+chsh -s /usr/bin/zsh
 
 # gnome-terminal-colors-solarized
 cd $DOTFILES/gnome-terminal-colors-solarized
