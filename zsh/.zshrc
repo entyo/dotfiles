@@ -25,3 +25,6 @@ export PATH=/home/e_ntyo/.local/bin:$PATH
 
 # VEDA(Vulkan SDK)
 export PATH=$HOME/VulkanSDK/1.0.68.0/x86_64/bin/:$PATH
+
+# dircolors
+eval `dircolors /path/to/dircolorsdb`
