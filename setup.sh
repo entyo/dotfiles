@@ -12,7 +12,7 @@ export DOTFILES=$HOME/dotfiles
 
 # zsh
 
-sudo echo "/usr/local/bin/zsh" >> /etc/shells
+echo "/usr/local/bin/zsh" >> /etc/shells
 chsh -s /usr/local/bin/zsh
 
 source $DOTFILES/antigen/antigen.zsh
