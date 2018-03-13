@@ -9,7 +9,8 @@ export DOTFILES=$HOME/dotfiles
 
 # antigen
 source $DOTFILES/antigen/antigen.zsh
-antigen bundle sorin-ionescu/prezto
+antigen use sorin-ionescu/prezto
+antigen apply
 
 # zsh起動時にtmux起動
 [[ -z "$TMUX" && ! -z "$PS1" ]] && exec tmux
@@ -19,7 +20,7 @@ alias ranger='TERM=xterm-256color ranger' # To use solarized theme :(
 
 # Use anyenv
 export PATH="$HOME/.anyenv/bin:$PATH"
-eval "$(anyenv init -)"
+eval "$(anyenv init - zsh)"
 
 export PATH=/home/e_ntyo/.local/bin:$PATH
 
