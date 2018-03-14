@@ -29,3 +29,7 @@ export PATH=$HOME/VulkanSDK/1.0.68.0/x86_64/bin/:$PATH
 
 # dircolors
 eval `dircolors ~/.dir_colors/dircolors`
+
+# hub
+fpath=(~/.zsh/completions $fpath) 
+autoload -U compinit && compinit
