@@ -13,6 +13,7 @@ export DOTFILES=$HOME/dotfiles
 # zsh
 ln -s $HOME/dotfiles/zsh/.zshrc $HOME/
 ln -s $HOME/dotfiles/zsh/.zprofile $HOME/
+ln -s $HOME/dotfiles/zsh/prezto/.zpreztorc $HOME/
 chsh -s /usr/bin/zsh
 
 # gnome-terminal-colors-solarized
