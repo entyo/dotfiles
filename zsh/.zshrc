@@ -33,3 +33,15 @@ eval `dircolors ~/.dir_colors/dircolors`
 # hub
 fpath=(~/.zsh/completions $fpath) 
 autoload -U compinit && compinit
+
+# Processing
+export PATH=/home/e_ntyo/processing-3.3.6:$PATH
+
+# aws-cli
+# source /home/e_ntyo/.local/bin/aws_completer
+
+# golang
+export GOROOT=$HOME/.anyenv/envs/goenv/versions/1.9.7
+export GOPATH="$HOME/go"
+export GOBIN="$GOPATH/bin"
+export PATH=$GOBIN:$PATH
