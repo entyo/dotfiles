@@ -1,10 +1,10 @@
 " 色づけを on にする
-set t_Co=256
 syntax on
 
 " https://github.com/lifepillar/vim-solarized8
+set termguicolors
 set background=dark
-colorscheme solarized8_high
+colorscheme solarized8_flat
 
 " ハイライトサーチを有効にする
 set hlsearch
