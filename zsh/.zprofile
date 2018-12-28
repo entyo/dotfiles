@@ -9,12 +9,6 @@
 export KCODE=u
 export HGENCODING=utf-8
 
-# Processing
-export PATH=/home/e_ntyo/processing-3.3.6:$PATH
-
-# golang
-export GOPATH="$HOME/go"
-
 # tdu
 export TDU_ID=""
 export TDU_PASS=""
@@ -89,9 +83,3 @@ make_swap () {
 }
 mount_tdu_dir ()  { sudo mount -t cifs //nas002.term.usmc.dendai.ac.jp/授業用ワークスペース /mnt/univ -o username=$TDU_ID,password=TDU_PASS,vers=1.0 }
 connect_to_tdu_via_vpn () { sudo openconnect https://vpn.ms.dendai.ac.jp/ }
-
-# aws-cli
-source /usr/local/bin/aws_zsh_completer.sh
-
-export GOBIN="$GOPATH/bin"
-export PATH=$GOBIN:$PATH

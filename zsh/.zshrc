@@ -37,4 +37,17 @@ autoload -U compinit && compinit
 # nix
 . /home/e_ntyo/.nix-profile/etc/profile.d/nix.sh
 
+# Java
 export JAVA_HOME="/usr/lib/jvm/java-8-oracle"
+
+# Processing
+export PATH=/home/e_ntyo/processing-3.3.6:$PATH
+
+# aws-cli
+# source /home/e_ntyo/.local/bin/aws_completer
+
+# golang
+export GOROOT=$HOME/.anyenv/envs/goenv/versions/1.9.7
+export GOPATH="$HOME/go"
+export GOBIN="$GOPATH/bin"
+export PATH=$GOBIN:$PATH
