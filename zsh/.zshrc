@@ -33,3 +33,8 @@ eval `dircolors ~/.dir_colors/dircolors`
 # hub
 fpath=(~/.zsh/completions $fpath) 
 autoload -U compinit && compinit
+
+# nix
+. /home/e_ntyo/.nix-profile/etc/profile.d/nix.sh
+
+export JAVA_HOME="/usr/lib/jvm/java-8-oracle"
