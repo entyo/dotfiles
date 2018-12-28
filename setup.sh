@@ -10,15 +10,19 @@ git submodule init && git submodule update
 
 export DOTFILES=$HOME/dotfiles
 
+# hyper
+# There is a nix package but it fetches old one
+# https://github.com/NixOS/nixpkgs/blob/master/pkgs/applications/misc/hyper/default.nix
+curl -LO https://github.com/zeit/hyper/releases/download/2.1.0/hyper_2.1.0_amd64.deb
+sudo dpkg -i hyper_2.1.0_amd64.deb
+ln -s $HOME/dotfiles/hyper/.hyper.js $HOME/
+sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /opt/Hyper/hyper 50
+
 # zsh
 ln -s $HOME/dotfiles/zsh/.zshrc $HOME/
 ln -s $HOME/dotfiles/zsh/.zprofile $HOME/
 ln -s $HOME/dotfiles/zsh/prezto/.zpreztorc $HOME/
 chsh -s /usr/bin/zsh
-
-# gnome-terminal-colors-solarized
-cd $DOTFILES/gnome-terminal-colors-solarized
-./install.sh
 
 # tmux
 cd $DOTFILES/tmux/
