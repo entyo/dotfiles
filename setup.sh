@@ -26,6 +26,11 @@ goenv install 1.11.4
 go get github.com/motemen/ghq
 
 # fish shell
+sudo wget "https://github.com/peco/peco/releases/download/v0.5.2/peco_linux_386.tar.gz"
+unar peco_linux_386.tar.gz
+sudo chmod +x ./peco_linux_386/peco
+sudo cp ./peco_linux_386/peco /usr/local/bin/
+
 curl -L https://get.oh-my.fish | fish
 ghq get git@github.com:powerline/fonts.git
 cd ~/.ghq/github.com/powerline/fonts/ && ./install.sh
