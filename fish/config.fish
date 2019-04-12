@@ -1,30 +1,42 @@
+set fish_theme agnoster
+set fish_plugins theme peco git tmux
 # Path to Oh My Fish install.
 set -gx OMF_PATH $HOME/.local/share/omf
 
-# Customize Oh My Fish configuration path.
-#set -gx OMF_CONFIG $HOME/.config/omf
+# tmux
+if test -z "$TMUX"; and test -n "$PS1"
+  exec tmux
+end
 
-set fish_theme agnoster
+set GOPATH $HOME/go
+set PATH /usr/local/bin /usr/sbin $HOME/.anyenv/bin /home/e_ntyo/.local/bin $GOPATH/bin $PATH
 
-set fish_plugins theme peco
+status --is-interactive
+and source (anyenv init -|psub)
 
 function peco_select_history
     if set -q $argv
-        history | peco | read -l line; and commandline $line
+        history | peco | read -l line
+        and commandline $line
     else
-        history | peco --query $argv | read -l line; and commandline $line
+        history | peco --query $argv | read -l line
+        and commandline $line
     end
 
     commandline -f repaint
 end
 
 function fish_user_key_bindings
-  bind \cr peco_select_history
-  bind \ce peco_select_repository
+    bind \cr peco_select_history
+    bind \ce peco_select_repository
 end
 
 function peco_select_repository
-    ghq list -p | peco --select-1 | read -l line; and builtin cd $line
+    ghq list -p | peco --select-1 | read -l line
+    and builtin cd $line
 
     commandline -f repaint
 end
+
+status --is-interactive
+and source (anyenv init -|psub)
