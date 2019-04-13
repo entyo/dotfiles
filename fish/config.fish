@@ -11,9 +11,6 @@ end
 set GOPATH $HOME/go
 set PATH /usr/local/bin /usr/sbin $HOME/.anyenv/bin /home/e_ntyo/.local/bin $GOPATH/bin $PATH
 
-status --is-interactive
-and source (anyenv init -|psub)
-
 function peco_select_history
     if set -q $argv
         history | peco | read -l line
@@ -38,5 +35,3 @@ function peco_select_repository
     commandline -f repaint
 end
 
-status --is-interactive
-and source (anyenv init -|psub)
