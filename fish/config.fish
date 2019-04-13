@@ -36,3 +36,4 @@ function peco_select_repository
 end
 
 set -gx SHELL /usr/bin/fish
+set fish_greeting
