@@ -62,6 +62,7 @@ ln -s $HOME/dotfiles/hyper/.hyper.js $HOME/
 sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /opt/Hyper/hyper 50
 
 # tmux
+sudo snap install tmux --classic
 cd $DOTFILES/tmux/
 ./autogen.sh
 ./configure && make && sudo make install

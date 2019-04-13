@@ -5,7 +5,7 @@ set -gx OMF_PATH $HOME/.local/share/omf
 
 # tmux
 if test -z "$TMUX"; and test -n "$PS1"
-  exec tmux
+    exec tmux
 end
 
 set GOPATH $HOME/go
