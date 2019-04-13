@@ -35,3 +35,4 @@ function peco_select_repository
     commandline -f repaint
 end
 
+set -gx SHELL /usr/bin/fish
