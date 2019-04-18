@@ -4,10 +4,9 @@ set fish_plugins theme peco git tmux
 set -gx OMF_PATH $HOME/.local/share/omf
 
 # tmux
-# if status is-interactive
-# and not set -q TMUX
-#     exec tmux
-# end
+if status --is-interactive; and not set -q TMUX
+    exec tmux
+end
 
 set GOPATH $HOME/go
 set PATH /usr/local/bin /usr/sbin $HOME/.anyenv/bin /home/e_ntyo/.local/bin $GOPATH/bin $PATH
